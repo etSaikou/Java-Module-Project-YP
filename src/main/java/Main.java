@@ -16,9 +16,9 @@ public class Main {
 
             //Проверка введённого названия машины
             while (name.isBlank()) {
-                System.out.printf("Введите название машины №%d:%n", i+1);
+                System.out.printf("Введите название машины №%d:%n", i + 1);
                 name = scanner.nextLine();
-                if(name.isBlank()){
+                if (name.isBlank()) {
                     System.out.println("Пустое название");
                 }
             }
@@ -37,11 +37,10 @@ public class Main {
             }
 
             //Ввод расстояния и запись победителя
-            Race.chooseWinner(new Car(name,speed));
+            Race.chooseWinner(new Car(name, speed));
         }
 
         //Объявление победителя
         Race.declareWinner();
-
     }
 }
