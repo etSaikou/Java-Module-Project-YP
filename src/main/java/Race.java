@@ -5,15 +5,15 @@ public class Race {
     private static int maxDistance = 0;
     private static String winner = "";
 
-    //Сверка рекордов и запись нового победителя
+    //Проверка расстоянияй и запись победителя
 
      public static void chooseWinner(Car car) {
 
-        int currentDistance = car.speed()*24;
+        int currentDistance = car.getSpeed()*24;
 
         if (maxDistance < currentDistance) {
             maxDistance = currentDistance;
-            winner = car.name();
+            winner = car.getName();
         }
 
     }
