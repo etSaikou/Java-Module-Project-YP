@@ -11,10 +11,17 @@ public class Main {
 
         for (int i = 0; i < 3; i++) {
 
-            System.out.printf("Введите название машины №%d:%n", i+1);
-            String name = scanner.nextLine();
-
+            String name = "";
             int speed = 0;
+
+            //Проверка введённого названия мащины
+            while (name.isBlank()) {
+                System.out.printf("Введите название машины №%d:%n", i+1);
+                name = scanner.nextLine();
+                if(name.isBlank()){
+                    System.out.println("Пустое название");
+                }
+            }
 
             //Проверка введённой скорости
             while (speed <= 0 || speed > 250) {
@@ -32,6 +39,7 @@ public class Main {
             //Ввод расстояния и запись победителя
             Race.chooseWinner(new Car(name,speed));
         }
+
         //Объявление победителя
         Race.declareWinner();
 
