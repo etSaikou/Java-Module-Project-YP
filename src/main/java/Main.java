@@ -14,7 +14,7 @@ public class Main {
             String name = "";
             int speed = 0;
 
-            //Проверка введённого названия мащины
+            //Проверка введённого названия машины
             while (name.isBlank()) {
                 System.out.printf("Введите название машины №%d:%n", i+1);
                 name = scanner.nextLine();

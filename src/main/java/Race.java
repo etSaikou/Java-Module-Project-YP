@@ -5,7 +5,7 @@ public class Race {
     private static int maxDistance = 0;
     private static String winner = "";
 
-    //Проверка расстоянияй и запись победителя
+    //Проверка расстояний и запись победителя. Если рекорд не побит победитель не меняется
 
      public static void chooseWinner(Car car) {
 
